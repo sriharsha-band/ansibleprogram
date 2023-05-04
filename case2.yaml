@@ -1,0 +1,7 @@
+---
+ - name: case 2
+   hosts: yaml
+   tasks:
+      - name: we can use msg module separately
+        debug:
+          msg: "Hi this is sri harsha"
