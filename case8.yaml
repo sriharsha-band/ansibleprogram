@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 8
+   hosts: yaml
+   tasks:
+    - name: verbosity
+      debug:
+       msg: "my ip is :{{ansible_default_ipv4}}"
+       verbosity: 1
