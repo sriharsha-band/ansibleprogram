@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 5
+   hosts: yaml
+   tasks:
+    - name: using variable & facts
+      debug:
+        var: inventory_hostname
