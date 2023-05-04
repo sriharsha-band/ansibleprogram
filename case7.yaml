@@ -1,0 +1,11 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 7
+   hosts: yaml
+   tasks:
+    - name: display all fscts variables
+      debug:
+       msg:
+        my host is {{ansible_hostname}}
+        my ip is {{ansible_facts['fqdn']}}
+        my ip v4 is {{ansible_facts.default_ipv4}}
