@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 13
+   hosts: yaml
+   tasks:
+   - name: display the monitoring command by using register & variables
+     command: ls -l /tmp
+     register: files
+   - debug: var=files.stdout_lines

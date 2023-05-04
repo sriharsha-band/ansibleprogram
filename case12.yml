@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case12
+   hosts: yaml
+   tasks:
+    - name: using registers & server kernel
+      command: uname -a
+      register: kernel
+    - debug: var=kernel

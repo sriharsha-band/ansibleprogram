@@ -1,0 +1,10 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case12a
+   hosts: yaml
+   tasks:
+    - name: using registers & server kernel
+      command: uname -a
+      register: kernel
+    - name: use the msg module & show the output
+      debug: msg="this is kernel version {{kernel}}"

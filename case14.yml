@@ -1,0 +1,17 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 14
+   hosts: yaml
+   tasks:
+   - name: server kernel
+     command: uname -a
+     register: kernal
+   - debug: var=kernal.stdout
+   - name: server date
+     command: date
+     register: date
+   - debug: var=date.stdout
+   - name: server uptime
+     command: uptime
+     register: up
+   - debug: var=up

@@ -1,0 +1,6 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 11
+   hosts: yaml
+   tasks:
+   - command: uname -a
