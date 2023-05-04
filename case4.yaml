@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+---
+ - name:  case 4
+   hosts: yaml
+   tasks:
+      - name: using filters
+        debug:
+          msg: " the host name is: {{inventory_hostname}}"
