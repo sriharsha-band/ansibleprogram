@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 6
+   hosts: yaml
+   tasks:
+     - name: printing ip
+       debug:
+        msg: my ip is :{{ansible_all_ipv4_addresses}}
