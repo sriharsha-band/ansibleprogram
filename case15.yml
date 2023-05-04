@@ -1,0 +1,15 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: case 15
+   hosts: yaml
+   tasks:
+    - name: kernal version
+      command: uname -a
+      register: kernal
+      tags: kernal
+    - debug: var=kernal.stdout
+    - name: date of server
+      command: date
+      register: date
+      tags: date
+    - debug: var=date.stdout
