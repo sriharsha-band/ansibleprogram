@@ -1,0 +1,8 @@
+echo " enter the date command "
+date
+echo " enter the uptime command "
+uptime
+echo " enter the uname -a command "
+uname -a
+echo " enter the df -h command "
+df -h
